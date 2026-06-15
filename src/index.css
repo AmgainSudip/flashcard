@@ -1,0 +1,36 @@
+.flashcard {
+  margin: 0 auto;
+  height: 200px;
+  text-align: center;
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.flashcard.easy {
+  background-color: #b6f7c1;
+}
+
+.flashcard.medium {
+  background-color: #ffe08a;
+}
+
+.flashcard.hard {
+  background-color: #ff9a9a;
+}
+
+.flashcard:hover {
+  transform:translateY(-3px);
+}
+
+.content {
+  text-align: center;
+  padding-top: 75px;
+}
+
+img {
+  height: 50px;
+  width: auto;
+}
