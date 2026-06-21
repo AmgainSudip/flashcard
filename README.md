@@ -1,16 +1,58 @@
-# React + Vite
+# Web Development Project 2 – Flashcard App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Submitted by: **Sudip Amgain**
 
-Currently, two official plugins are available:
+This web app is a simple flashcard application that displays one question/answer card at a time. Users can click a card to flip between question and answer, and click a next button to load a new random card. The app is designed to support active recall learning.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Time spent: **X** hours spent in total
 
-## React Compiler
+## Required Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The following **required** functionality is completed:
 
-## Expanding the ESLint configuration
+- [x] The app displays the title of the card set, a short description, and the total number of cards  
+  - [x] Title of card set is displayed  
+  - [x] A short description of the card set is displayed  
+  - [x] A list of card pairs is created  
+  - [x] The total number of cards in the set is displayed  
+  - [x] Card set is represented as an array of objects containing question/answer pairs  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [x] A single card at a time is displayed  
+  - [x] Only one side of the card is shown at a time  
+
+- [x] Clicking on the card flips the card over, showing the corresponding answer/question  
+  - [x] Clicking once flips to the answer  
+  - [x] Clicking again flips back to the question  
+
+- [x] Clicking the next button displays a random new card  
+
+## Optional Features
+
+- [x] Cards contain images in addition to or in place of text  
+- [x] Cards have different visual styles based on category (difficulty/subject/etc.)
+
+## Additional Features
+
+- Random card selection logic avoids immediate repeats  
+- Built using React functional components with hooks (`useState`)  
+- Clean separation between card display and control logic  
+
+## Video Walkthrough
+
+<img src="https://github.com/AmgainSudip/flashcard/blob/main/src/walkthrough.gif" />
+
+GIF created with ScreenToGif
+
+## Notes
+
+Main challenge was managing flip state cleanly while updating cards without resetting UI inconsistently. Also required structuring state so that card selection and flip behavior stayed independent.
+
+## License
+
+Copyright 2026 Sudip Amgain
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
