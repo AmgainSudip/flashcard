@@ -1,51 +1,52 @@
-# Web Development Project 2 – Flashcard App
+# Web Development Project 3 - Computer Science Flashcards
 
 Submitted by: **Sudip Amgain**
 
-This web app is a simple flashcard application that displays one question/answer card at a time. Users can click a card to flip between question and answer, and click a next button to load a new random card. The app is designed to support active recall learning.
+This web app: **A computer science flashcard application that helps users practice CS concepts by answering questions, submitting guesses, and tracking their progress.**
 
-Time spent: **X** hours spent in total
+Time spent: **2 hours spent in total**
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] The app displays the title of the card set, a short description, and the total number of cards  
-  - [x] Title of card set is displayed  
-  - [x] A short description of the card set is displayed  
-  - [x] A list of card pairs is created  
-  - [x] The total number of cards in the set is displayed  
-  - [x] Card set is represented as an array of objects containing question/answer pairs  
+- [x] **The user can enter their guess into an input box *before* seeing the flipside of the card**
+  - Application features a clearly labeled input box with a submit button where users can type in a guess.
+  - Clicking the submit button with an **incorrect** answer shows visual feedback that the answer is wrong.
+  - Clicking the submit button with a **correct** answer shows visual feedback that the answer is correct.
 
-- [x] A single card at a time is displayed  
-  - [x] Only one side of the card is shown at a time  
+- [x] **The user can navigate through an ordered list of cards**
+  - A forward/next button displayed on the card navigates to the next card in a set sequence when clicked.
+  - A previous/back button displayed on the card returns to the previous card in the set sequence when clicked.
+  - Next and back buttons provide visual feedback by becoming disabled when the user reaches the beginning or end of the card list, preventing wrap-around navigation.
 
-- [x] Clicking on the card flips the card over, showing the corresponding answer/question  
-  - [x] Clicking once flips to the answer  
-  - [x] Clicking again flips back to the question  
+The following **optional** features are implemented:
 
-- [x] Clicking the next button displays a random new card  
+- [ ] Users can use a shuffle button to randomize the order of the cards
+  - Cards remain in the original sequence unless the shuffle button is clicked.
+  - Cards change to a random sequence after clicking shuffle.
 
-## Optional Features
+- [x] **A user’s answer may be counted as correct even when it is slightly different from the target answer**
+  - Answers ignore uppercase/lowercase differences.
 
-- [x] Cards contain images in addition to or in place of text  
-- [x] Cards have different visual styles based on category (difficulty/subject/etc.)
+- [x] **A counter displays the user’s current and longest streak of correct responses**
+  - The current streak counter increases when a user guesses an answer correctly.
+  - The current streak counter resets to 0 when a user guesses incorrectly.
+  - The longest streak counter updates when the current streak exceeds the previous longest streak.
 
-## Additional Features
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of displayed cards
+  - Users can mark cards as mastered.
+  - Mastered cards are removed from the displayed cards and added to a mastered cards list.
 
-- Random card selection logic avoids immediate repeats  
-- Built using React functional components with hooks (`useState`)  
-- Clean separation between card display and control logic  
 
 ## Video Walkthrough
 
+Here's a walkthrough of implemented user stories:
+
 <img src="https://github.com/AmgainSudip/flashcard/blob/main/src/walkthrough.gif" />
 
-GIF created with ScreenToGif
 
-## Notes
-
-Main challenge was managing flip state cleanly while updating cards without resetting UI inconsistently. Also required structuring state so that card selection and flip behavior stayed independent.
+GIF created with LiceCap.
 
 ## License
 
@@ -56,3 +57,5 @@ you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
